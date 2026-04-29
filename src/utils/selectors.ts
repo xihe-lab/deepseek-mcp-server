@@ -7,13 +7,14 @@ export const selectors = {
   mode: {
     fast: { role: 'radio' as const, name: '快速模式' },
     expert: { role: 'radio' as const, name: '专家模式' },
+    radiogroup: { role: 'radiogroup' as const },
   },
   chat: {
-    assistantReply: 'generic:has(> paragraph)',
-    replyActions: 'button', // ≥5 buttons = reply complete
+    assistantReply: 'dslc-reply-wrapper',
+    replyActions: 'button',
   },
   nav: {
-    logo: 'img[alt], img[cursor]',
+    logo: 'img',
   },
   login: {
     signInPath: '/sign_in',
